@@ -11,12 +11,16 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float sightRange;
     [SerializeField] private LayerMask playerLm;
     [SerializeField] private LayerMask groundLm;
+    [SerializeField] float stoppingRangeWalking = 1;
+    [SerializeField] float stoppingRangeChasing = 5;
     
     private Transform _player;
     private Vector3 _walkStartingPoint;
     private bool _walkPointSet;
     private bool _playerInSightRange;
     private NavMeshAgent _agent;
+
+
 
     private void Awake()
     {
@@ -35,6 +39,8 @@ public class EnemyMovement : MonoBehaviour
     
     private void Patroling()
     {
+        _agent.stoppingDistance = stoppingRangeWalking;
+
         if (!_walkPointSet) SearchWalkPoint();
 
         if (_walkPointSet)
@@ -62,6 +68,8 @@ public class EnemyMovement : MonoBehaviour
     
     private void ChasePlayer()
     {
+        _agent.stoppingDistance = stoppingRangeChasing;
+
         _agent.SetDestination(_player.position);
     }
 }
