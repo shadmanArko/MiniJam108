@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 143104008}
   - component: {fileID: 143104009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 3769422745975868293}
   - component: {fileID: 959382675595857017}
   - component: {fileID: 657659038600752287}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,6 +347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 03e17697dccc18e40af6abe0024a9a3d,
         type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03e17697dccc18e40af6abe0024a9a3d,
+        type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -369,6 +374,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 5019902573433440324, guid: 79b6629212ef48c4fa8e4d2ed144fc31,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5019902573433440327, guid: 79b6629212ef48c4fa8e4d2ed144fc31,
         type: 3}
@@ -424,6 +434,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5019902573606295252, guid: 79b6629212ef48c4fa8e4d2ed144fc31,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5290373978988309622, guid: 79b6629212ef48c4fa8e4d2ed144fc31,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79b6629212ef48c4fa8e4d2ed144fc31, type: 3}
