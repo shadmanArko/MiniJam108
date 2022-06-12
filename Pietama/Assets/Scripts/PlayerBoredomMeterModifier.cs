@@ -14,6 +14,7 @@ public class PlayerBoredomMeterModifier : MonoBehaviour
     void Start()
     {
         _boredomMeterSlider = GameObject.Find("Slider").GetComponent<Slider>();
+        InvokeRepeating(nameof(IncreaseBoredom), .1f, 10);
     }
     
     public void DecreaseBoredom()

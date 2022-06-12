@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField]private Enemy enemyPrefab;
-
-    private bool _isAlive;
+    [SerializeField] private Enemy enemyPrefab;
+    [SerializeField] private int respawnTime = 3;
+    
+    private Vector3 _startPosition;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        _startPosition = enemyPrefab.gameObject.transform.position;
+    }
+    
+    public void DestroyEnemy()
+    {
+        enemyPrefab.gameObject.SetActive(false);
+        respawnTime++;
+        Invoke(nameof(RespawnEnemy), respawnTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void RespawnEnemy()
     {
-        
+        enemyPrefab.gameObject.transform.position = _startPosition;
+        enemyPrefab.gameObject.SetActive(true);
     }
 }
