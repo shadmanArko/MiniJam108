@@ -35,6 +35,11 @@ public class EnemyMovement : MonoBehaviour
         
         if (!_playerInSightRange) Patroling();
         if (_playerInSightRange) ChasePlayer();
+
+        if (_agent.isStopped)
+        {
+            
+        }
     }
     
     private void Patroling()
