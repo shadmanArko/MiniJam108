@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 5556138286181693940}
   - component: {fileID: 7985587988550066244}
   - component: {fileID: 688072483654494589}
+  - component: {fileID: 3798825322980256511}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -190,6 +191,22 @@ CapsuleCollider:
   m_Height: 2.220065
   m_Direction: 1
   m_Center: {x: 0, y: 0.61003256, z: 0}
+--- !u!114 &3798825322980256511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991810126711463704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efcd2739c9c8ec4c8b98617d4f0febe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8983544193237381624}
+  triggers:
+  - Idle
+  - Attack
 --- !u!1 &4631355799311530812
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5098569424668641151}
+  respawnTime: 3
 --- !u!1001 &2387079440045604431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384,6 +402,12 @@ Transform:
 --- !u!4 &8673950865183878547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6431294476755686364, guid: 0c02710ee8829a847bba8181beadf4f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2387079440045604431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8983544193237381624 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6740597552311275447, guid: 0c02710ee8829a847bba8181beadf4f8,
     type: 3}
   m_PrefabInstance: {fileID: 2387079440045604431}
   m_PrefabAsset: {fileID: 0}
